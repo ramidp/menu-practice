@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style> 
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Caprasimo;
+                user-select: none;
+                overflow: hidden;
+            }
+
+            .container {
+                width: 100%;
+                height: 100vh;
+                background: linear-gradient(45deg, purple, white);
+                animation: gradient 7s ease infinite;
+                background-size: 150% 150%;
+                display: flex;
+                justify-content: center;
+                align-items: center;                
+            }
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                    }
+                }
+
+            .container .main-menu1 {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                border-radius: 50%;
+                width: 12vw;
+                aspect-ratio: 1/1;                
+                background-color: rgb(102, 1, 102);
+                transition: 300ms ease all;
+                position: absolute;
+                z-index: 1;
+                border: 5px solid white;
+
+                @media (max-width: 1100px) {
+                    width: 12vw;
+                }
+            }
+            .container .main-menu1:hover {
+                cursor: pointer;
+                filter: contrast(50%);
+            }
+
+            .container .nav-menu{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container .nav-menu .main-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                border-radius: 50%;
+                width: 10vw;
+                aspect-ratio: 1/1;                
+                background-color: violet;
+                border: 2px solid black;              
+                transition: 300ms ease all;
+                position: absolute;
+            }
+
+            .container .main-menu:hover {
+                cursor: pointer;
+                filter: contrast(50%);
+            }
+            .container h1 {
+                margin: 0;
+                color: white;
+                font-size: calc(18px + 0.5vw);
+                text-align: center;
+            }  
+
+            /* ANIMATION CENTERING */
+            
+            .container .center:nth-child(1) {
+                animation-name: center1;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes center1 {
+                0% { transform: translateX(150%)}
+                100% { transform: translateX(0%)}
+            }
+
+            .container .center:nth-child(2) {
+                animation-name: center2;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes center2 {
+                0% { transform: translateY(150%)}
+                100% { transform: translateY(0%)}
+            }
+            .container .center:nth-child(3) {
+                animation-name: center3;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes center3 {
+                0% { transform: translateX(-150%)}
+                100% { transform: translateX(0%)}
+            }
+
+            .container .center:nth-child(4) {
+                animation-name: center4;
+                animation-duration: 1s; 
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes center4 {
+                0% { transform: translateY(-150%)}
+                100% { transform: translateY(0%)}
+            }
+
+            /* ANIMATION MOVEMENT */
+
+            .container .movement:nth-child(1) {                 
+                animation-name: ani1;
+                animation-duration: 1s;
+                animation-delay: 100ms;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes ani1 {
+                0% { transform: translateX(0%)}
+                100% { transform: translateX(150%)}
+            }
+            .container .movement:nth-child(2) {                 
+                animation-name: ani2;
+                animation-duration: 1s;
+                animation-delay: 200ms;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes ani2 {
+                0% { transform: translateY(0%)}
+                100% { transform: translateY(150%)}
+            }
+
+            .container .movement:nth-child(3) {                 
+                animation-name: ani3;
+                animation-duration: 1s;
+                animation-delay: 300ms;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes ani3 {
+                0% { transform: translateX(0%)}
+                100% { transform: translateX(-150%)}
+            }
+
+            .container .movement:nth-child(4) {                 
+                animation-name: ani4;
+                animation-duration: 1s;
+                animation-delay: 400ms;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes ani4 {
+                0% { transform: translateY(0%)}
+                100% { transform: translateY(-150%)}
+            }
+
+            /* SECTION 1 */
+
+            .container .sect1-movement {
+                    animation-name: centersect;
+                    animation-duration: 1.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+            }
+            @keyframes centersect {
+                0% { transform: translateX(100%)}
+                100% { transform: translateX(0%)}
+            }
+            .container .sect1-out {
+                    animation-name: outsect;
+                    animation-duration: 1.5s;
+                    animation-timing-function: ease-in-out;                 
+            }
+            @keyframes outsect {
+                0% { transform: translateX(0%)}
+                100% { transform: translateX(100%)}
+            }
+
+            .container .section1 {
+                background-color: red;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-100%);                
+            }
+            
+            .container p {
+               font-size: 50px;
+               color: white;
+               transition: 300ms ease all;             
+            }
+            .container p:hover {
+               cursor: pointer;
+               filter: contrast(50%);          
+            }
+
+            /* SECTION 2 */
+
+            .container .sect2-movement {
+                    animation-name: centersect2;
+                    animation-duration: 1.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+            }
+            @keyframes centersect2 {
+                0% { transform: translateY(100%)}
+                100% { transform: translateY(0%)}
+            }
+            .container .sect2-out {
+                    animation-name: outsect2;
+                    animation-duration: 1.5s;
+                    animation-timing-function: ease-in-out;                 
+            }
+            @keyframes outsect2 {
+                0% { transform: translateY(0%)}
+                100% { transform: translateY(100%)}
+            }
+
+
+            .container .section2 {
+                background-color: green;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-100%);                
+            }
+            
+            .container .section1 p {
+               font-size: 50px;
+               color: white;
+               transition: 300ms ease all;             
+            }
+            .container .section1 p:hover {
+               cursor: pointer;
+               filter: contrast(50%);          
+            }
+            
+                        
+            .container .asta-sign {
+                    position: absolute;
+                    right: 2vw;
+                    bottom: 2vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 20px 0;
+            }
+            .container .asta-sign img {
+                    width: 70px;
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container"> 
+
+            <div
+            class="asta-sign"
+            >
+
+                <h1>Para más contenido, puedes visitarnos en:</h1>
+                <a 
+                target="_blank"
+                href="https://www.astaestudio.com">
+                    
+                    <img src="https://www.astaestudio.com/diseno/asta-transparente.png" alt="Asta"/>
+                </a>
+
+            </div>
+     
+            <div
+            id="main"
+            class="main-menu1"
+            >
+                <h1>M A I N</h1>
+            </div>
+
+
+            <div
+            class="nav-menu"
+            >
+
+                <div
+                id="menu1"
+                class="main-menu"
+                >
+                    <h1>Diseño Web</h1>
+                </div>
+                <div
+                id="menu2"
+                class="main-menu"
+                >
+                    <h1>Mobile /
+                        <br>
+                        Apps</h1>
+                </div>
+                <div
+                class="main-menu"
+                >
+                    <h1>Marketing</h1>
+                </div>
+                <div
+                class="main-menu"
+                >
+                    <h1>Diseño</h1>
+                </div>
+    
+            </div>
+
+                <div
+                id="sect1"
+                class="section1"
+                >
+                    <p
+                    id="back"
+                    >BACK</p>
+                    <h1>Quieres mostrar tu emprendimiento o negocio de una forma muy creativa?</h1>
+                    <h1>Entonces estamos aqui para ayudarte</h1>
+    
+                </div>
+
+            <div
+            id="sect2"
+            class="section2"
+            >
+                <p
+                id="back2"
+                >BACK</p>
+                <h1>Tenemos </h1>
+                <h1>Entonces estamos aqui para ayudarte</h1>
+
+            </div>
+
+    </div>
+
+    
+    <script>
+
+        const mainBtn = document.getElementById('main')
+
+        const sect1Div = document.getElementById('sect1')
+        const sect2Div = document.getElementById('sect2')
+
+        const menu1Btn = document.getElementById('menu1')
+        const menu2Btn = document.getElementById('menu2')
+
+        const backBtn = document.getElementById('back')
+        const back2Btn = document.getElementById('back2')
+        const menuDivs = document.querySelectorAll(".main-menu");
+
+
+        mainBtn.addEventListener("click", function() {
+
+            menuDivs.forEach(function(div) {
+                if (div.classList.contains("movement")) {
+                    div.classList.remove("movement");
+                    div.classList.add("center");
+                } else if (div.classList.contains("center")) {
+                    div.classList.remove("center");
+                    div.classList.add("movement");
+                } else {
+                    div.classList.add("movement");
+                }
+            });
+        });
+
+        menu1Btn.addEventListener('click' , function() {
+            sect1Div.classList.add('sect1-movement');
+           
+
+            menuDivs.forEach(function(div) {
+                if (div.classList.contains("movement")) {
+                    div.classList.remove("movement");
+                    div.classList.add("center");
+                } else if (div.classList.contains("center")) {
+                    div.classList.remove("center");
+                    div.classList.add("movement");
+                } else {
+                    div.classList.add("movement");
+                }
+            });           
+        })
+
+        menu2Btn.addEventListener('click' , function() {
+            sect2Div.classList.add('sect2-movement');           
+
+            menuDivs.forEach(function(div) {
+                if (div.classList.contains("movement")) {
+                    div.classList.remove("movement");
+                    div.classList.add("center");
+                } else if (div.classList.contains("center")) {
+                    div.classList.remove("center");
+                    div.classList.add("movement");
+                } else {
+                    div.classList.add("movement");
+                }
+            });           
+        })
+
+        backBtn.addEventListener('click' , function() {
+            sect1Div.classList.add('sect1-out')
+            sect1Div.classList.remove('sect1-movement')
+            setTimeout(() => {
+                sect1Div.classList.remove('sect1-out')
+
+            },2050)                
+        
+        })
+
+        back2Btn.addEventListener('click' , function() {
+            sect2Div.classList.add('sect2-out')
+            sect2Div.classList.remove('sect2-movement')
+            setTimeout(() => {
+                sect2Div.classList.remove('sect2-out')
+
+            },2050)                
+        
+        })
+
+    </script>
+    
+        
+</body>
+</html>
